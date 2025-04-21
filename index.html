@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huaso Dorking</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Huaso Dorking</h1>
+        <p class="subtitle">Una guía completa de los operadores de búsqueda para optimizar tus consultas</p>
+        <p class="date">Actualizado: Abril 2025</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#texto">Operadores de Texto</a></li>
+            <li><a href="#filtrado">Operadores de Filtrado</a></li>
+            <li><a href="#rangos">Rangos y Números</a></li>
+            <li><a href="#booleanos">Booleanos y Frases</a></li>
+            <li><a href="#avanzados">Operadores Avanzados</a></li>
+            <li><a href="#obsoletos">Operadores Obsoletos</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="introduccion" class="fade-in">
+            <h2>Introducción</h2>
+            <p>Aquí encontrarás todos los operadores de búsqueda avanzada de Google documentados actualmente. Algunos
+                operadores tienen dos versiones con la misma función (por ejemplo, <strong>allinanchor</strong> y
+                <strong>inanchor</strong>).
+            </p>
+
+            <div class="note">
+                <p><strong>Nota:</strong> En este documento se sigue la convención de corchetes cuadrados. Al realizar
+                    una búsqueda, no debes incluir los corchetes cuadrados en tu consulta. Por ejemplo, si ves [codfish
+                    site:nytimes.com], deberías buscar: codfish site:nytimes.com</p>
+            </div>
+        </section>
+
+        <section id="texto" class="fade-in">
+            <h2>Operadores de Texto</h2>
+
+            <h3>allinanchor: / inanchor:</h3>
+            <p>Restringe los resultados a páginas que contienen todos los términos de búsqueda en el texto de anclaje de
+                los enlaces a la página.</p>
+            <div class="code-example">
+                [allinanchor: best restaurant Sunnyvale] mostrará páginas donde el texto de anclaje contiene "best",
+                "restaurant" y "Sunnyvale".
+            </div>
+            <p>El operador <strong>inanchor:</strong> solo busca el término que sigue inmediatamente.</p>
+            <div class="code-example">
+                [inanchor:sales offer 2011] buscará "sales" en el texto de anclaje.
+            </div>
+
+            <h3>allintext: / intext:</h3>
+            <p>Restringe los resultados a aquellos que contienen todos los términos de búsqueda especificados en el
+                texto de la página.</p>
+            <div class="code-example">
+                [allintext: camping tent stove] mostrará páginas donde las palabras "camping", "tent" y "stove" aparecen
+                en el texto.
+            </div>
+            <p>El operador <strong>intext:</strong> buscará solo el siguiente término en el texto de la página.</p>
+
+            <h3>allintitle: / intitle:</h3>
+            <p>Restringe los resultados a aquellos que contienen todos los términos de búsqueda especificados en el
+                título.</p>
+            <div class="code-example">
+                [allintitle: universidad relaciones] mostrará documentos que contienen "universidad" y "relaciones" en
+                el título.
+            </div>
+            <p>El operador <strong>intitle:</strong> buscará solo el siguiente término en el título.</p>
+
+            <h3>allinurl: / inurl:</h3>
+            <p>Restringe los resultados a aquellos que contienen todos los términos de búsqueda especificados en la URL.
+            </p>
+            <div class="code-example">
+                [allinurl:google faq] mostrará documentos que contienen "google" y "faq" en la URL.
+            </div>
+        </section>
+
+        <section id="filtrado" class="fade-in">
+            <h2>Operadores de Filtrado</h2>
+
+            <h3>site:</h3>
+            <p>Restringe los resultados de búsqueda al sitio o dominio especificado.</p>
+            <div class="code-example">
+                [penguins site:.aq] buscará páginas sobre pingüinos de sitios web con dominio .aq (Antártida).
+            </div>
+            <p>Puedes especificar un dominio con o sin punto, por ejemplo, .gov o gov.</p>
+
+            <h3>filetype:</h3>
+            <p>Limita los resultados a páginas cuyos nombres terminan en el sufijo especificado.</p>
+            <div class="code-example">
+                [search engine guidelines filetype:pdf] mostrará archivos PDF que coincidan con los términos.
+            </div>
+            <p>El operador filetype funciona con cualquier cadena después del último punto.</p>
+
+            <h3>before: / after:</h3>
+            <p>Permite encontrar resultados que fueron publicados antes o después de una fecha determinada.</p>
+            <div class="code-example">
+                [avengers endgame before:2018-1-1]<br>
+                [avengers endgame after:2020-1-1]
+            </div>
+            <p>El formato de fecha es AAAA-MM-DD. Si solo especificas el año, se tomará por defecto el primer día del
+                año.</p>
+
+            <h3>Signo menos (-):</h3>
+            <p>Excluye páginas que contienen la palabra especificada.</p>
+            <div class="code-example">
+                [anti-virus -software] buscará "anti-virus" pero excluirá referencias a "software".
+            </div>
+            <p>El signo menos debe aparecer inmediatamente antes de la palabra y debe estar precedido por un espacio.
+            </p>
+
+            <h3>define:</h3>
+            <p>Proporciona definiciones de páginas web para el término que sigue.</p>
+            <div class="code-example">
+                [define peruse] mostrará una definición de la palabra "peruse".
+            </div>
+        </section>
+
+        <section id="rangos" class="fade-in">
+            <h2>Rangos y Números</h2>
+
+            <h3>Rango numérico (..):</h3>
+            <p>Busca resultados que contengan números dentro de un rango específico.</p>
+            <div class="code-example">
+                [Willie Mays 1950..1960]<br>
+                [DVD player $50..$100]
+            </div>
+            <p>Puedes especificar una unidad de medida o algún otro indicador de lo que representa el rango numérico.
+            </p>
+
+            <h3>AROUND (n):</h3>
+            <p>Limita los resultados a documentos donde el primer término aparece dentro de cierto número de palabras
+                del segundo término.</p>
+            <div class="code-example">
+                [search AROUND 3 engine]
+            </div>
+            <p>Encontrará documentos que tengan las palabras "search" y "engine" a una distancia máxima de 3 palabras
+                entre sí.</p>
+        </section>
+
+        <section id="booleanos" class="fade-in">
+            <h2>Operadores Booleanos y Frases</h2>
+
+            <h3>OR:</h3>
+            <p>El operador booleano OR especifica alternativas a usar como sinónimos en la búsqueda.</p>
+            <div class="code-example">
+                [mesotelioma OR "lung disease" treatment]
+            </div>
+            <p>Buscará un tratamiento para mesotelioma o para "lung disease". Asegúrate de escribir OR en mayúsculas.
+            </p>
+
+            <h3>Búsqueda de frases (comillas):</h3>
+            <p>Al poner comillas dobles alrededor de un conjunto de palabras, le indicas a Google que considere las
+                palabras exactas en ese orden exacto.</p>
+            <div class="code-example">
+                ["Alexander Bell"]
+            </div>
+            <p>Esto mostrará resultados como "Alexander Graham Bell" y "Alexander G. Bell".</p>
+
+            <h3>Operador estrella (*):</h3>
+            <p>El asterisco, o comodín, es una característica poco conocida que puede ser muy útil. Si incluyes * dentro
+                de una consulta, le indica a Google que intente tratar el asterisco como un marcador de posición para
+                cualquier término desconocido y luego encuentre las mejores coincidencias.</p>
+            <div class="code-example">
+                [Google *] mostrará resultados sobre muchos productos de Google.
+            </div>
+        </section>
+
+        <section id="avanzados" class="fade-in">
+            <h2>Operadores Avanzados</h2>
+
+            <h3>Combinaciones de operadores:</h3>
+            <p>Muchos de los operadores de búsqueda (-, OR, y *) pueden combinarse.</p>
+            <div class="code-example">
+                [article security -site:Wikipedia.org]<br>
+                [salsa recipe -tomatoes -filetype:pdf]
+            </div>
+
+            <h3>Caracteres especiales:</h3>
+            <p>Google ahora permite buscar casi todos los caracteres especiales. Puedes buscar símbolos como $, %, #,
+                etc.</p>
+            <div class="code-example">
+                [I ❤️ NY]<br>
+                [size 7½]
+            </div>
+
+            <h3>Orden de palabras:</h3>
+            <p>El orden de las palabras importa en una búsqueda. Considera la diferencia entre:</p>
+            <div class="code-example">
+                [to be or not to be] vs. [be to not or be to]
+            </div>
+            <p>Los resultados son MUY diferentes.</p>
+        </section>
+
+        <section id="obsoletos" class="fade-in">
+            <h2>Operadores Obsoletos</h2>
+
+            <div class="deprecated">
+                <h3>related:</h3>
+                <p>Mostraba páginas similares a la web especificada. (Obsoleto desde junio 2023)</p>
+            </div>
+
+            <div class="deprecated">
+                <h3>link:</h3>
+                <p>Mostraba páginas que apuntaban a esa URL. (Fuera de servicio desde mediados de 2016)</p>
+            </div>
+
+            <div class="deprecated">
+                <h3>info:</h3>
+                <p>Eliminado a mediados de 2017.</p>
+            </div>
+
+            <div class="deprecated">
+                <h3>Operador + (plus):</h3>
+                <p>Solía significar lo mismo que Verbatim (es decir, no usar sinónimos). Luego se convirtió en una
+                    bandera para "Search G+ for mentions of this term".</p>
+            </div>
+
+            <div class="deprecated">
+                <h3>Sinónimo (~):</h3>
+                <p>Permitía buscar "y todos los sinónimos" de un término.</p>
+            </div>
+
+            <div class="deprecated">
+                <h3>filetype:CSV / filetype:MP3:</h3>
+                <p>Estos operadores de tipo de archivo solían devolver resultados útiles, pero ya no lo hacen.</p>
+                <p>Alternativa: Usar <a href="https://datasetsearch.research.google.com/">Google Data Set Search</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Basado en el documento original "Google Advanced Search Operators" de Daniel M. Russell.</p>
+        <p>Shortcut: bit.ly/AllTheOperators</p>
+        <p>Página creada en 2025 | Diseño minimalista en modo oscuro</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            window.addEventListener('scroll', function () {
+                let current = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 300)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
