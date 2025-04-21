@@ -4,15 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huaso Dorking</title>
+    <title>Operadores de Búsqueda Avanzada de Google - Edición Chilena</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>Huaso Dorking</h1>
-        <p class="subtitle">Una guía completa de los operadores de búsqueda para optimizar tus consultas</p>
+        <div class="chile-flag">
+            <div class="chile-flag-blue"></div>
+            <div class="chile-flag-white"></div>
+            <div class="chile-flag-red"></div>
+        </div>
+        <h1>Operadores de Búsqueda Avanzada de Google</h1>
+        <p class="subtitle">¡Güena, cabros! Aquí les traigo los mejores trucos pa' buscar en Google como todo un
+            baqueano digital</p>
         <p class="date">Actualizado: Abril 2025</p>
     </header>
 
@@ -35,30 +41,35 @@
     <main class="container">
         <section id="introduccion" class="fade-in">
             <h2>Introducción</h2>
-            <p>Aquí encontrarás todos los operadores de búsqueda avanzada de Google documentados actualmente. Algunos
+            <p>Póngale atención, mi'jito, que estos operadores le van a servir más que un buen lazo en el campo. Aquí
+                encontrará todos los operadores de búsqueda avanzada de Google documentados actualmente. Algunos
                 operadores tienen dos versiones con la misma función (por ejemplo, <strong>allinanchor</strong> y
                 <strong>inanchor</strong>).
             </p>
 
             <div class="note">
                 <p><strong>Nota:</strong> En este documento se sigue la convención de corchetes cuadrados. Al realizar
-                    una búsqueda, no debes incluir los corchetes cuadrados en tu consulta. Por ejemplo, si ves [codfish
-                    site:nytimes.com], deberías buscar: codfish site:nytimes.com</p>
+                    una búsqueda, no debe incluir los corchetes cuadrados en su consulta. Por ejemplo, si ve [empanadas
+                    receta], debería buscar: empanadas receta</p>
             </div>
 
             <h3>¿Qué es Google Dorking?</h3>
-            <p>Google Dorking es una técnica para explotar la potencia de búsqueda de Google usando operadores
-                avanzados. <strong>No</strong> es hacking, es <strong>sacar ventaja de la desorganización digital del
-                    mundo</strong>.</p>
+            <p>Google Dorking es como buscar una aguja en un pajar, pero sabiendo exactamente dónde mirar, ¡poh!
+                <strong>No</strong> es hackeo, es <strong>puro ingenio campesino aplicado a la tecnología</strong>.
+            </p>
 
             <h3>OSINT (Open Source Intelligence)</h3>
-            <p>OSINT se refiere a la recolección de información de fuentes públicas como redes sociales, foros y
-                repositorios. Un ejemplo práctico sería encontrar documentos confidenciales en un PDF filtrado de una
-                institución pública.</p>
+            <p>OSINT es como andar de sapo mirando lo que la gente deja tirado en la calle, pero en internet. Un ejemplo
+                práctico sería encontrar información pública que alguien dejó a la vista sin darse cuenta.</p>
+
+            <div class="huaso-tip">
+                <p>Como decía mi taita: "El que sabe buscar, encuentra". Y con estos operadores va a encontrar hasta lo
+                    que no se le ha perdido.</p>
+            </div>
 
             <h3>Keywords Estratégicas</h3>
-            <p>Algunas palabras actúan como imanes para datos sensibles: "confidencial", "backup", "contraseña",
-                "interno", "secreto", entre otras.</p>
+            <p>Las palabras clave son como el silbido pa' llamar al perro, pero en Google. Algunas palabras actúan como
+                imanes: "confidencial", "backup", "contraseña", "interno", "secreto", entre otras.</p>
         </section>
 
         <section id="texto" class="fade-in">
@@ -68,48 +79,49 @@
             <p>Restringe los resultados a páginas que contienen todos los términos de búsqueda en el texto de anclaje de
                 los enlaces a la página.</p>
             <div class="code-example">
-                [allinanchor: best restaurant Sunnyvale] mostrará páginas donde el texto de anclaje contiene "best",
-                "restaurant" y "Sunnyvale".
+                [allinanchor: festival cueca tradicional] mostrará páginas donde el texto de anclaje contiene
+                "festival", "cueca" y "tradicional".
             </div>
             <p>El operador <strong>inanchor:</strong> solo busca el término que sigue inmediatamente.</p>
             <div class="code-example">
-                [inanchor:sales offer 2011] buscará "sales" en el texto de anclaje.
+                [inanchor:empanadas receta 2023] buscará "empanadas" en el texto de anclaje.
             </div>
 
             <h3>allintext: / intext:</h3>
             <p>Restringe los resultados a aquellos que contienen todos los términos de búsqueda especificados en el
                 texto de la página.</p>
-            <div class="code-example">
-                [allintext: camping tent stove] mostrará páginas donde las palabras "camping", "tent" y "stove" aparecen
-                en el texto.
+            <div class="chile-example">
+                [allintext: receta empanadas pino casera] mostrará páginas donde las palabras "receta", "empanadas",
+                "pino" y "casera" aparecen en el texto.
             </div>
             <p>El operador <strong>intext:</strong> buscará solo el siguiente término en el texto de la página.</p>
-            <div class="code-example">
-                [intext:confidencial site:cl] buscará páginas chilenas que contengan la palabra "confidencial" en el
-                texto.
+            <div class="chile-example">
+                [intext:secreto site:recetaschilenas.cl] buscará páginas de un sitio ficticio que contengan la palabra
+                "secreto" en el texto.
             </div>
 
             <h3>allintitle: / intitle:</h3>
             <p>Restringe los resultados a aquellos que contienen todos los términos de búsqueda especificados en el
                 título.</p>
-            <div class="code-example">
-                [allintitle: universidad relaciones] mostrará documentos que contienen "universidad" y "relaciones" en
-                el título.
+            <div class="chile-example">
+                [allintitle: fonda cueca chicha] mostrará documentos que contienen "fonda", "cueca" y "chicha" en el
+                título.
             </div>
             <p>El operador <strong>intitle:</strong> buscará solo el siguiente término en el título.</p>
-            <div class="code-example">
-                [intitle:"Dashboard" "admin" site:cl] buscará páginas chilenas con "Dashboard" en el título y "admin" en
+            <div class="chile-example">
+                [intitle:"Festival" "Huaso" site:cl] buscará páginas chilenas con "Festival" en el título y "Huaso" en
                 cualquier parte.
             </div>
 
             <h3>allinurl: / inurl:</h3>
             <p>Restringe los resultados a aquellos que contienen todos los términos de búsqueda especificados en la URL.
             </p>
-            <div class="code-example">
-                [allinurl:google faq] mostrará documentos que contienen "google" y "faq" en la URL.
+            <div class="chile-example">
+                [allinurl:fonda tradicional] mostrará documentos que contienen "fonda" y "tradicional" en la URL.
             </div>
-            <div class="code-example">
-                [inurl:/wp-content/uploads site:cl] encontrará directorios de uploads en WordPress de sitios chilenos.
+            <div class="chile-example">
+                [inurl:/fondas site:municipalidadficticia.cl] encontrará directorios de fondas en un sitio municipal
+                ficticio.
             </div>
         </section>
 
@@ -118,51 +130,53 @@
 
             <h3>site:</h3>
             <p>Restringe los resultados de búsqueda al sitio o dominio especificado.</p>
-            <div class="code-example">
-                [penguins site:.aq] buscará páginas sobre pingüinos de sitios web con dominio .aq (Antártida).
+            <div class="chile-example">
+                [site:huasosdechile.cl "chupalla artesanal"] buscará páginas sobre chupallas artesanales en un sitio
+                ficticio de huasos.
             </div>
-            <p>Puedes especificar un dominio con o sin punto, por ejemplo, .gov o gov.</p>
-            <div class="code-example">
-                [site:registrocivil.cl "padrón electoral"] buscará referencias al padrón electoral en el sitio del
-                Registro Civil chileno.
+            <p>Puedes especificar un dominio con o sin punto, por ejemplo, .cl o cl.</p>
+            <div class="chile-example">
+                [site:cl "recetas tradicionales" -"extranjeras"] buscará recetas tradicionales chilenas, excluyendo las
+                extranjeras.
             </div>
 
             <h3>filetype:</h3>
             <p>Limita los resultados a páginas cuyos nombres terminan en el sufijo especificado.</p>
-            <div class="code-example">
-                [search engine guidelines filetype:pdf] mostrará archivos PDF que coincidan con los términos.
+            <div class="chile-example">
+                [filetype:pdf "manual del buen huaso" site:cl] mostrará archivos PDF sobre huasos en dominios chilenos.
             </div>
             <p>El operador filetype funciona con cualquier cadena después del último punto.</p>
-            <div class="code-example">
-                [filetype:csv "rut, nombre, dirección" site:cl] buscará archivos CSV que contengan datos personales en
-                sitios chilenos.
+            <div class="chile-example">
+                [filetype:doc "contrato arriendo fundo" site:cl] buscará documentos Word de contratos de arriendo
+                ficticios.
             </div>
 
             <h3>before: / after:</h3>
             <p>Permite encontrar resultados que fueron publicados antes o después de una fecha determinada.</p>
-            <div class="code-example">
-                [avengers endgame before:2018-1-1]<br>
-                [avengers endgame after:2020-1-1]
+            <div class="chile-example">
+                ["fiesta costumbrista" before:2023-09-18 after:2023-09-01] buscará fiestas costumbristas en septiembre
+                2023.
             </div>
             <p>El formato de fecha es AAAA-MM-DD. Si solo especificas el año, se tomará por defecto el primer día del
                 año.</p>
 
             <h3>Signo menos (-):</h3>
             <p>Excluye páginas que contienen la palabra especificada.</p>
-            <div class="code-example">
-                [anti-virus -software] buscará "anti-virus" pero excluirá referencias a "software".
+            <div class="chile-example">
+                ["rodeo chileno" -"animal" site:tradicioneschilenas.cl] buscará rodeo chileno excluyendo páginas que
+                mencionen "animal".
             </div>
             <p>El signo menos debe aparecer inmediatamente antes de la palabra y debe estar precedido por un espacio.
             </p>
-            <div class="code-example">
-                ["contrato" -"modelo" site:gob.cl] buscará contratos reales (no modelos) en sitios gubernamentales
-                chilenos.
+            <div class="chile-example">
+                ["empanadas" -"argentinas" -"peruanas" site:cl] buscará empanadas chilenas, excluyendo referencias a
+                otros países.
             </div>
 
             <h3>define:</h3>
             <p>Proporciona definiciones de páginas web para el término que sigue.</p>
             <div class="code-example">
-                [define peruse] mostrará una definición de la palabra "peruse".
+                [define huaso] mostrará una definición de la palabra "huaso".
             </div>
         </section>
 
@@ -171,9 +185,11 @@
 
             <h3>Rango numérico (..):</h3>
             <p>Busca resultados que contengan números dentro de un rango específico.</p>
-            <div class="code-example">
-                [Willie Mays 1950..1960]<br>
-                [DVD player $50..$100]
+            <div class="chile-example">
+                ["fundo" "hectáreas" 50..100 site:cl] buscará fundos entre 50 y 100 hectáreas.
+            </div>
+            <div class="chile-example">
+                ["vino reserva" "$" 5000..10000 site:viñasficticias.cl] buscará vinos reserva entre 5000 y 10000 pesos.
             </div>
             <p>Puedes especificar una unidad de medida o algún otro indicador de lo que representa el rango numérico.
             </p>
@@ -181,14 +197,13 @@
             <h3>AROUND (n):</h3>
             <p>Limita los resultados a documentos donde el primer término aparece dentro de cierto número de palabras
                 del segundo término.</p>
-            <div class="code-example">
-                [search AROUND 3 engine]
+            <div class="chile-example">
+                ["Huaso" AROUND 3 "Caballo"] encontrará documentos que tengan las palabras "Huaso" y "Caballo" a una
+                distancia máxima de 3 palabras entre sí.
             </div>
-            <p>Encontrará documentos que tengan las palabras "search" y "engine" a una distancia máxima de 3 palabras
-                entre sí.</p>
-            <div class="code-example">
-                ["Político" AROUND 5 "Donante"] encontrará documentos donde estas palabras aparecen cerca, útil para
-                investigar relaciones.
+            <div class="chile-example">
+                ["Empanada" AROUND 5 "Chicha" site:cl] encontrará páginas donde estos términos aparecen cerca, útil para
+                buscar combinaciones tradicionales.
             </div>
         </section>
 
@@ -197,106 +212,135 @@
 
             <h3>OR:</h3>
             <p>El operador booleano OR especifica alternativas a usar como sinónimos en la búsqueda.</p>
-            <div class="code-example">
-                [mesotelioma OR "lung disease" treatment]
+            <div class="chile-example">
+                ["chicha" OR "mistela" receta casera site:cl] buscará recetas de chicha o mistela.
             </div>
-            <p>Buscará un tratamiento para mesotelioma o para "lung disease". Asegúrate de escribir OR en mayúsculas.
-            </p>
+            <p>Buscará un tratamiento para uno u otro término. Asegúrate de escribir OR en mayúsculas.</p>
+            <div class="chile-example">
+                ["rodeo" OR "trilla" tradicional site:culturachilena.cl] buscará información sobre rodeos o trillas.
+            </div>
 
             <h3>Búsqueda de frases (comillas):</h3>
             <p>Al poner comillas dobles alrededor de un conjunto de palabras, le indicas a Google que considere las
                 palabras exactas en ese orden exacto.</p>
-            <div class="code-example">
-                ["Alexander Bell"]
+            <div class="chile-example">
+                ["el campo chileno en el siglo XXI"] buscará esta frase exacta.
             </div>
-            <p>Esto mostrará resultados como "Alexander Graham Bell" y "Alexander G. Bell".</p>
+            <div class="chile-example">
+                ["como preparar un buen asado al palo"] buscará instrucciones específicas para asados.
+            </div>
 
             <h3>Operador estrella (*):</h3>
             <p>El asterisco, o comodín, es una característica poco conocida que puede ser muy útil. Si incluyes * dentro
                 de una consulta, le indica a Google que intente tratar el asterisco como un marcador de posición para
-                cualquier término desconocido y luego encuentre las mejores coincidencias.</p>
-            <div class="code-example">
-                [Google *] mostrará resultados sobre muchos productos de Google.
+                cualquier término desconocido.</p>
+            <div class="chile-example">
+                ["Fiestas * en Chile"] mostrará resultados sobre diferentes tipos de fiestas en Chile.
             </div>
-            <div class="code-example">
-                ["Ministro * renunció"] encontrará noticias sobre renuncias de ministros con diferentes nombres.
+            <div class="chile-example">
+                ["El huaso * su caballo"] encontrará diferentes relaciones entre el huaso y su caballo.
+            </div>
+
+            <div class="huaso-tip">
+                <p>Pa' buscar bien hay que ser más pillo que zorro en gallinero. No ande buscando a lo loco, sea
+                    ordenadito como los surcos de la chacra.</p>
             </div>
         </section>
 
         <section id="recetas" class="fade-in">
             <h2>Recetas de Búsqueda Prácticas</h2>
+            <p>Ahora, póngale atención a estas recetas de búsqueda más sabrosas que cazuela en invierno.</p>
 
-            <h3>Documentos Internos de Empresas</h3>
-            <p>Búsqueda para encontrar documentos internos que podrían estar expuestos públicamente:</p>
-            <div class="code-example">
-                site:cl "Confidencial" (filetype:pdf OR filetype:docx) 2023
+            <h3>Documentos Internos Ficticios</h3>
+            <div class="recipe">
+                <h4>Pa' encontrar documentos de planificación municipal:</h4>
+                <div class="code-example">
+                    site:municipalidadficticia.cl "Confidencial" (filetype:pdf OR filetype:docx) "presupuesto fiestas
+                    patrias"
+                </div>
+                <p class="recipe-result">Esta búsqueda podría encontrar documentos de planificación de presupuestos para
+                    fiestas patrias en una municipalidad ficticia.</p>
             </div>
-            <p>Esta búsqueda podría revelar informes financieros, contratos laborales o estrategias comerciales que no
-                deberían estar públicamente accesibles.</p>
 
-            <h3>Directorios Expuestos en Universidades</h3>
-            <p>Búsqueda para encontrar directorios de archivos expuestos en sitios universitarios:</p>
-            <div class="code-example">
-                intitle:"Index of" "/documentos" site:uchile.cl
+            <h3>Directorios Expuestos Ficticios</h3>
+            <div class="recipe">
+                <h4>Pa' encontrar directorios con información sobre fondas:</h4>
+                <div class="code-example">
+                    intitle:"Index of" "/fondas" site:municipalidadficticia.cl
+                </div>
+                <p class="recipe-result">Esta búsqueda podría revelar directorios con información sobre fondas
+                    municipales ficticias.</p>
             </div>
-            <p>Podrías encontrar tesis, guías docentes o incluso exámenes resueltos que han sido inadvertidamente
-                expuestos.</p>
 
-            <h3>Credenciales en Repositorios</h3>
-            <p>Búsqueda para encontrar credenciales potencialmente expuestas en repositorios de código:</p>
-            <div class="code-example">
-                "DB_PASSWORD" "localhost" site:github.com
+            <h3>Credenciales Ficticias</h3>
+            <div class="recipe">
+                <h4>Pa' mostrar lo que NO hay que dejar público:</h4>
+                <div class="code-example">
+                    "usuario_admin" "clave" site:sistemaficticio.cl
+                </div>
+                <p class="recipe-result">Esta búsqueda podría encontrar credenciales de acceso a sistemas ficticios que
+                    no deberían estar expuestas.</p>
             </div>
-            <p>Esta búsqueda podría revelar accesos a bases de datos que han sido accidentalmente subidos a repositorios
-                públicos.</p>
 
-            <h3>Búsqueda en Google Drive</h3>
-            <p>Búsqueda para encontrar documentos confidenciales compartidos públicamente en Google Drive:</p>
-            <div class="code-example">
-                site:drive.google.com ("confidential" OR "internal" OR "restricted" OR "classified")
+            <h3>Búsqueda en Google Drive Ficticia</h3>
+            <div class="recipe">
+                <h4>Pa' encontrar recetas secretas compartidas:</h4>
+                <div class="code-example">
+                    site:drive.google.com "recetas secretas" "fundo el pehuén"
+                </div>
+                <p class="recipe-result">Esta búsqueda podría encontrar documentos compartidos públicamente con recetas
+                    de un fundo ficticio.</p>
             </div>
-            <p>Esta búsqueda podría revelar documentos sensibles que han sido compartidos con configuración pública por
-                error.</p>
 
-            <h3>Búsqueda en Instituciones Públicas</h3>
-            <p>Búsqueda para encontrar información potencialmente sensible en sitios gubernamentales:</p>
-            <div class="code-example">
-                site:gob.cl ("usuario" OR "contraseña") (filetype:xls OR filetype:txt)
+            <div class="huaso-tip">
+                <p>Ojo al charqui, mi'jito, que esto es pa' aprender nomás, no pa' andar de pillo.</p>
             </div>
-            <p>Esta búsqueda podría revelar planillas con credenciales de sistemas internos que no deberían estar
-                expuestas.</p>
         </section>
 
         <section id="herramientas" class="fade-in">
             <h2>Herramientas Complementarias</h2>
+            <p>Estas herramientas le van a servir más que un buen caballo en la cordillera.</p>
 
-            <h3>Google Hacking Database (GHDB)</h3>
-            <p>Un repositorio de consultas de Google Dorking mantenido por Exploit-DB. Contiene miles de consultas
-                predefinidas para diferentes propósitos.</p>
-            <div class="code-example">
-                <a href="https://www.exploit-db.com/google-hacking-database"
-                    target="_blank">https://www.exploit-db.com/google-hacking-database</a>
+            <div class="tool">
+                <div class="tool-content">
+                    <h3>Google Hacking Database (GHDB)</h3>
+                    <p>Un repositorio de consultas de Google Dorking mantenido por Exploit-DB. Contiene miles de
+                        consultas predefinidas para diferentes propósitos.</p>
+                    <div class="code-example">
+                        <a href="https://www.exploit-db.com/google-hacking-database"
+                            target="_blank">https://www.exploit-db.com/google-hacking-database</a>
+                    </div>
+                </div>
             </div>
 
-            <h3>Shodan</h3>
-            <p>Un motor de búsqueda para dispositivos conectados a Internet. Permite encontrar dispositivos IoT,
-                cámaras, routers y más.</p>
-            <div class="code-example">
-                country:CL port:22
+            <div class="tool">
+                <div class="tool-content">
+                    <h3>Shodan</h3>
+                    <p>Un motor de búsqueda para dispositivos conectados a Internet. Permite encontrar dispositivos IoT,
+                        cámaras, routers y más.</p>
+                    <div class="code-example">
+                        country:CL port:22
+                    </div>
+                    <p>Esta búsqueda en Shodan encontraría servidores SSH en Chile.</p>
+                </div>
             </div>
-            <p>Esta búsqueda en Shodan encontraría servidores SSH en Chile.</p>
 
-            <h3>Wayback Machine</h3>
-            <p>Una herramienta que permite ver versiones archivadas de sitios web, incluso después de que el contenido
-                haya sido eliminado.</p>
-            <div class="code-example">
-                <a href="https://web.archive.org" target="_blank">https://web.archive.org</a>
+            <div class="tool">
+                <div class="tool-content">
+                    <h3>Wayback Machine</h3>
+                    <p>Una herramienta que permite ver versiones archivadas de sitios web, incluso después de que el
+                        contenido haya sido eliminado.</p>
+                    <div class="code-example">
+                        <a href="https://web.archive.org" target="_blank">https://web.archive.org</a>
+                    </div>
+                    <p>Útil para recuperar archivos o páginas que han sido eliminados de sitios web.</p>
+                </div>
             </div>
-            <p>Útil para recuperar archivos o páginas que han sido eliminados de sitios web.</p>
         </section>
 
         <section id="errores" class="fade-in">
             <h2>Errores Comunes y Mejores Prácticas</h2>
+            <p>Estos errores son más comunes que perro en micro, así que ojo.</p>
 
             <h3>Usar operadores sin contexto</h3>
             <p>Un error común es utilizar operadores de búsqueda sin suficiente contexto, lo que resulta en resultados
@@ -306,17 +350,15 @@
                 filetype:pdf site:cl
 
                 # BIEN:
-                filetype:pdf "informe tributario" site:serviciodeimpuestosinternos.cl
+                filetype:pdf "manual tradicional" "huaso chileno" site:culturachilena.cl
             </div>
 
             <h3>Ignorar la caché de Google</h3>
             <p>La caché de Google puede contener versiones de páginas que ya no están disponibles o han sido
                 modificadas.</p>
             <div class="code-example">
-                cache:twitter.com "mensaje borrado"
+                cache:sitioejemplo.cl "contenido que fue modificado"
             </div>
-            <p>Esta búsqueda podría revelar mensajes que han sido eliminados pero que Google había indexado previamente.
-            </p>
 
             <h3>Mejores Prácticas</h3>
             <ul>
@@ -326,12 +368,19 @@
                 <li>Revisa varias páginas de resultados, no solo la primera</li>
                 <li>Utiliza las herramientas complementarias para ampliar tu investigación</li>
             </ul>
+
+            <div class="huaso-tip">
+                <p>Si no encuentra a la primera, no se achaque, pruebe otra combinación. Como decimos en el campo: "No
+                    por mucho madrugar amanece más temprano", así que tómese su tiempo pa' hacer las búsquedas bien
+                    hechas.</p>
+            </div>
         </section>
 
         <section id="legal" class="fade-in">
             <h2>Consideraciones Éticas y Legales</h2>
+            <p>Las leyes chilenas son más enredadas que bolsa de gatos, pero aquí se las explico clarito.</p>
 
-            <div class="warning">
+            <div class="legal">
                 <h3>Leyes Relevantes</h3>
                 <p><strong>Ley 19.223 (Delitos Informáticos):</strong> Establece penas de hasta 5 años por acceso no
                     autorizado a sistemas informáticos.</p>
@@ -340,8 +389,8 @@
             </div>
 
             <h3>Regla de Oro</h3>
-            <p>"Si encuentras algo ilegal o sensible, repórtalo a las autoridades correspondientes y sigue adelante. No
-                intentes acceder, modificar o distribuir información a la que no deberías tener acceso."</p>
+            <p>"Como decía mi abuela: 'La curiosidad mató al gato', así que no se vaya a pasar pa'l otro lado. Si
+                encuentra algo ilegal o sensible, repórtelo a las autoridades correspondientes y siga adelante."</p>
 
             <h3>Uso Responsable</h3>
             <p>Las técnicas de Google Dorking son herramientas poderosas que deben utilizarse de manera ética y
@@ -352,8 +401,11 @@
                 <li>Para encontrar información pública relevante</li>
                 <li>Para aprender sobre seguridad informática</li>
             </ul>
-            <p>No utilices estas técnicas para acceder a información privada, robar datos o realizar actividades
-                ilegales.</p>
+
+            <div class="warning">
+                <p><strong>No sea leso, use estos trucos pa' cosas buenas, no pa' andar haciendo maldades. Acuérdese que
+                        en Chile la justicia puede ser lenta, pero llega como el invierno.</strong></p>
+            </div>
         </section>
 
         <section id="avanzados" class="fade-in">
@@ -361,26 +413,24 @@
 
             <h3>Combinaciones de operadores:</h3>
             <p>Muchos de los operadores de búsqueda (-, OR, y *) pueden combinarse.</p>
-            <div class="code-example">
-                [article security -site:Wikipedia.org]<br>
-                [salsa recipe -tomatoes -filetype:pdf]
-            </div>
-            <div class="code-example">
+            <div class="chile-example">
                 [site:cl "Confidencial" -"plantilla" -"ejemplo" filetype:pdf after:2022]
+            </div>
+            <div class="chile-example">
+                ["rodeo chileno" site:cl -site:wikipedia.org filetype:pdf]
             </div>
 
             <h3>Caracteres especiales:</h3>
             <p>Google ahora permite buscar casi todos los caracteres especiales. Puedes buscar símbolos como $, %, #,
                 etc.</p>
-            <div class="code-example">
-                [I ❤️ NY]<br>
-                [size 7½]
+            <div class="chile-example">
+                ["$" 5000 "empanada"]
             </div>
 
             <h3>Orden de palabras:</h3>
             <p>El orden de las palabras importa en una búsqueda. Considera la diferencia entre:</p>
-            <div class="code-example">
-                [to be or not to be] vs. [be to not or be to]
+            <div class="chile-example">
+                ["receta empanada chilena"] vs. ["chilena empanada receta"]
             </div>
             <p>Los resultados son MUY diferentes.</p>
         </section>
@@ -420,18 +470,25 @@
                 <p>Alternativa: Usar <a href="https://datasetsearch.research.google.com/">Google Data Set Search</a></p>
             </div>
         </section>
+
+        <a href="#" class="back-to-top" id="back-to-top">↑</a>
+
     </main>
 
+
+
     <footer>
-        <p>Basado en el documento original "Google Advanced Search Operators" de Daniel M. Russell.</p>
-        <p>Ejemplos de Google Dorking adaptados de "Guía Avanzada de Google Dorking (Chilean Edition)".</p>
-        <p>Shortcut: bit.ly/AllTheOperators</p>
-        <p>Página creada en 2025 | Diseño minimalista en modo oscuro</p>
-        <p><strong>Nota:</strong> Esta información se proporciona únicamente con fines educativos. Utiliza estas
+        <p>Basado en el documento original <a
+                href="https://docs.google.com/document/d/1ydVaJJeL1EYbWtlfj9TPfBTE5IBADkQfZrQaBZxqXGs"
+                target="_blank">Google
+                Advanced Search Operators</a> de Daniel M. Russell.</p>
+        <p><strong>Nota:</strong> Esta información se proporciona únicamente con fines <strong>educativos</strong>.
+            Utilice estas
             técnicas de manera ética y responsable.</p>
     </footer>
 
     <script>
+
         document.addEventListener('DOMContentLoaded', function () {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('nav a');
@@ -455,6 +512,18 @@
                 });
             });
         });
+        const backToTopButton = document.getElementById('back-to-top');
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+        backToTopButton.onclick = function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
     </script>
 </body>
 
