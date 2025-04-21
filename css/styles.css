@@ -10,6 +10,8 @@
   --warning-color: #ea4335;
   --success-color: #34a853;
   --info-color: #4285f4;
+  --danger-color: #ea4335;
+  --chile-color: #ff3333;
 }
 
 * {
@@ -117,6 +119,8 @@ nav {
   margin-bottom: 2rem;
   z-index: 100;
   border-bottom: 1px solid var(--border-color);
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 nav ul {
@@ -127,14 +131,15 @@ nav ul {
 }
 
 nav li {
-  margin: 0 1rem;
+  margin: 0 0.5rem;
 }
 
 nav a {
   color: var(--text-secondary);
   font-weight: 500;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.3rem;
   transition: color 0.3s ease;
+  font-size: 0.9rem;
 }
 
 nav a:hover,
@@ -172,7 +177,8 @@ th {
 
 .note,
 .warning,
-.deprecated {
+.deprecated,
+.danger {
   padding: 1rem;
   border-radius: 4px;
   margin: 1.5rem 0;
@@ -193,6 +199,21 @@ th {
   border-left: 4px solid var(--warning-color);
   text-decoration: line-through;
   opacity: 0.7;
+}
+
+.danger {
+  background-color: rgba(234, 67, 53, 0.15);
+  border-left: 4px solid var(--danger-color);
+}
+
+ul,
+ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
 }
 
 footer {
@@ -229,6 +250,10 @@ footer {
   nav li {
     margin: 0.5rem 0;
   }
+
+  .code-example {
+    font-size: 0.9rem;
+  }
 }
 
 .fade-in {
@@ -243,4 +268,55 @@ footer {
   to {
     opacity: 1;
   }
+}
+
+.chile-example {
+  border-left: 4px solid var(--chile-color);
+  background-color: rgba(255, 51, 51, 0.05);
+}
+
+.recipe {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  background-color: rgba(66, 133, 244, 0.05);
+}
+
+.recipe h4 {
+  color: var(--accent-color);
+  margin-top: 0;
+}
+
+.recipe-result {
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-top: 1rem;
+}
+
+.tool {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.tool-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: var(--accent-color);
+}
+
+.tool-content {
+  flex: 1;
+}
+
+.legal {
+  background-color: rgba(234, 67, 53, 0.05);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.legal h3 {
+  color: var(--warning-color);
 }
